@@ -46,6 +46,7 @@ class Login {
 	@Given("User berada di halaman login")
 	def halaman_login() {
 		WebUI.openBrowser(GlobalVariable.url)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/btnCloseModal'), 10)
 		WebUI.click(findTestObject('Object Repository/btnCloseModal'))
 		WebUI.click(findTestObject('Object Repository/btnLogin'))
 	}
